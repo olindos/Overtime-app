@@ -1,4 +1,20 @@
-# PostgreSQL. Versions 9.1 and up are supported.
+#development:
+  #adapter: postgresql
+  #encoding: unicode
+  #database: Owertime_development
+  #pool: 5
+  #username: ol
+  #password: barby
+#
+#production:
+  #adapter: postgresql
+  #encoding: unicode
+  #database: Owertime_production
+  #pool: 5
+  #username: ol
+  #password: barby
+
+# PostgreSQL. Versions 8.2 and up are supported.
 #
 # Install the pg driver:
 #   gem install pg
@@ -17,9 +33,11 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
+  username: ol
+  password: barby
+  # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
 
 development:
   <<: *default
